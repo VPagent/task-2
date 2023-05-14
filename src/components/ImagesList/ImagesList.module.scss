@@ -23,4 +23,12 @@
   border: none;
   border-radius: 8px;
   color: white;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(12, 12, 144);
+  }
+  &:disabled {
+    background-color: grey;
+  }
 }
