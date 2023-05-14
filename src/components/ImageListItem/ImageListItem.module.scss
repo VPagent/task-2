@@ -1,0 +1,161 @@
+.item {
+  position: relative;
+  display: flex;
+
+  width: 220px;
+  height: 220px;
+  margin-top: 20px;
+
+  border: 5px solid grey;
+  border-radius: 50%;
+  overflow: hidden;
+
+  @media screen and (min-width: 320px) {
+    margin-right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 40px;
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+    &:first-of-type {
+      border: 5px solid red;
+    }
+    &:nth-of-type(2n + 1) {
+      border: 5px solid red;
+    }
+    &:last-of-type {
+      margin-left: 40px;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    margin-right: 30px;
+
+    &:nth-of-type(2n) {
+      margin-right: 30px;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+    &:nth-of-type(2n + 1) {
+      border: 5px solid grey;
+    }
+    &:nth-of-type(3n + 1) {
+      border: 5px solid red;
+    }
+    &:last-of-type {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 20px;
+
+    &:nth-of-type(2n) {
+      margin-right: 20px;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 20px;
+    }
+    &:nth-of-type(4n) {
+      margin-right: 0px;
+    }
+
+    &:first-of-type {
+      border: 5px solid red;
+    }
+    &:nth-of-type(3n + 1) {
+      border: 5px solid grey;
+    }
+    &:nth-of-type(4n + 1) {
+      border: 5px solid red;
+    }
+    &:last-of-type {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    border: 5px solid yellow;
+  }
+  &:hover .img {
+    transform: rotate(45deg);
+  }
+
+  transition: border 250ms ease-in-out;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  flex-grow: 1;
+
+  transition: transform 250ms ease-in-out;
+}
+.deleteBtn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+
+  padding: 5px;
+}
+.deleteIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.largeImageBox {
+  position: relative;
+}
+.largeImage {
+  max-width: calc(100vw - 40px);
+  height: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 6px;
+
+  color: red;
+  fill: red;
+}
+// .closeIcon{}
+.bottomBorder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.556);
+}
+
+.modalText {
+  margin-left: 20px;
+  color: white;
+  font-size: 20px;
+}
